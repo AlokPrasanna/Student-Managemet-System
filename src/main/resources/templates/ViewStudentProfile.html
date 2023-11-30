@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Profile</title>
+    <link href="/CSS/ViewStudentProfile.css" type="text/css" rel="stylesheet">
+</head>
+<script src="/JS/jquery-3.7.1.min.js"></script>
+<script src="/JS/ViewStudentProfile.js"></script>
+<body>
+<div>
+    <header id="header">
+        <h2>Student Management System</h2>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:8080/studentms/StudentDashboard">Home</a></li>
+                <li><a href="http://localhost:8080/studentms/viewStudentProfile">View Profile</a></li>
+                <li><a href="http://localhost:8080/studentms/updateStudentProfile">Update Profile</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<hr>
+<br>
+<div id="content" >
+    <h1 id="topic">Profile</h1>
+    <br>
+    <p>Name: <span id="name"></span></p>
+    <p>Email Address: <span id="email"></span></p>
+    <p>Grade: <span id="grade"></span></p>
+    <p>Class: <span id="studentClass"></span></p>
+    <p>Date of Birth: <span id="birthday"></span></p>
+    <p>Gender: <span id="gender"></span></p>
+    <br>
+</div>
+<br>
+<button type="button" class="button" id="backButton" onclick="goBack()">Back</button>
+<hr>
+<div class="footer">
+    <footer>
+        <p>&copy;2023 Student Management System</p>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+body{
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: lightcyan;
+}
+header {
+    background-color: cadetblue;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+#header h2{
+    font-size: 22px;
+    color: white;
+}
+#header nav{
+    margin-left: auto;
+}
+#header ul {
+    list-style: none;
+    display: flex;
+    margin-right: 0;
+}
+#header li {
+    margin-left: 20px;
+}
+#header a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+#header a:hover {
+    text-decoration: underline;
+}
+li {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #3498DB;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+li:hover {
+    background-color: #2980B9;
+}
+hr{
+    background-color: black;
+    height: 2px;
+}
+#content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#content #topic{
+    margin-left: 10px;
+    color: darkorange;
+    font-size: 30px;
+}
+#content p{
+    margin-left: 180px;
+    font-size: 25px;
+}
+.button {
+    padding: 10px 20px;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+#backButton {
+    background-color: #333333;
+}
+.footer{
+    background-color: cadetblue;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: white ;
+}

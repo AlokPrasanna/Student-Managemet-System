@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard </title>
+    <link href="/CSS/StudentDashboard.css" type="text/css" rel="stylesheet">
+</head>
+<script src="/JS/jquery-3.7.1.min.js"></script>
+<script src="/JS/StudentDashboard.js"></script>
+<body>
+<div>
+    <header id="header">
+        <h2>Student Management System</h2>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:8080/studentms/StudentDashboard">Home</a></li>
+                <li><a href="http://localhost:8080/studentms/viewStudentProfile">View Profile</a></li>
+                <li><a href="http://localhost:8080/studentms/updateStudentProfile">Update Profile</a></li>
+                <li><a onclick="logOut()">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<hr>
+<div class="content" >
+    <div id="welcomeMsg"></div>
+    <div class="inBox">
+        <button type="button" class="button" id="history" name="history" onclick="goToMessageHistoryPage()">Message History</button>
+        <button type="button" class="button" id="inbox" name="inbox" onclick="goToInboxPage()">InBox</button>
+    </div>
+</div>
+<div class="dashboard">
+    <div class="sideBar">
+        <h1>Student Dashboard</h1>
+        <ul>
+            <li onclick="studentAnouncementPage()">Announcements</li>
+            <li onclick="studentTimeTablePage()">Time Table</li>
+        </ul>
+    </div>
+    <div class="right-section">
+        <div class="createNewChat">
+            <h1>Create New Chat</h1><br>
+            <label for="selectSubject">Select Subject:</label>
+            <select id="selectSubject">
+                <option value="none">None</option>
+                <option value="Math">Maths</option>
+                <option value="Science">Science</option>
+                <option value="Sinhala">Sinhala</option>
+                <option value="English">English</option>
+                <option value="Buddhism">Buddhism</option>
+                <option value="History">History</option>
+            </select>
+            <label for="selectGrade">Select Grade:</label>
+            <select id="selectGrade">
+                <option value="null">None</option>
+                <option value="6">Grade 6</option>
+                <option value="7">Grade 7</option>
+                <option value="8">Grade 8</option>
+                <option value="9">Grade 9</option>
+                <option value="10">Grade 10</option>
+                <option value="11">grade 11</option>
+            </select>
+            <label for="selectClassRoom">Select Class:</label>
+            <select id="selectClassRoom">
+                <option value="null">None</option>
+                <option value="A">Class A</option>
+                <option value="B">Class B</option>
+                <option value="C">Class C</option>
+                <option value="D">Class D</option>
+                <option value="E">Class E</option>
+            </select>
+            <br><br>
+            <label for="textMsg">Type Your Message Here:</label><br>
+            <textarea id="textMsg" rows="10" cols="40"></textarea><br><br>
+            <button type="button" class="button" id="creteNewChat" name="inbox" onclick="getMessageDetails()">Create New Chat</button>
+        </div>
+    </div>
+
+</div>
+<br>
+<hr>
+<div class="footer">
+    <footer>
+        <p>&copy;2023 Student Management System</p>
+    </footer>
+</div>
+</body>
+</html>

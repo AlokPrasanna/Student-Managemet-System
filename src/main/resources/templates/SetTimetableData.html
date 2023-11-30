@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set Timetable Data</title>
+    <link href="/CSS/SetTimetableData.css" type="text/css" rel="stylesheet">
+</head>
+<script src="/JS/jquery-3.7.1.min.js"></script>
+<script src="/JS/SetTimetableData.js"></script>
+<body>
+<div>
+    <header id="header">
+        <h2>Student Management System</h2>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:8080/studentms/adminDashboard">Home</a></li>
+                <li><a href="http://localhost:8080/studentms/admin/viewAdminProfile">View profile</a></li>
+                <li><a href="http://localhost:8080/studentms/admin/updateDetails">Update Profile</a></li>
+                <li><a onclick="logOut()">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+</div><hr><br>
+<div class="content">
+    <h1 style="text-align: center;font-size: 25px;color: #2ecc71;">Set Time Table Data</h1><br>
+    <div style="display: flex; align-items: center;" >
+        <label style="font-size: 20px;margin-left: 5px; color: #2c3e50;"  for="teacherId"><b>Enter Teacher Id:</b></label>
+        <input style="margin-left: 5px;font-size: 18px;width: 100px; border:solid; border-radius: 5px" type="text" name="teacherId" id="teacherId" placeholder="E.g. T12345" required>
+        <button style="margin-left: 20px;" type="button" class="button" id="getTeacherDetails" onclick="getTeacherData()">Get Teacher Details</button>
+    </div>
+        <div class="dashboard">
+        <div class="left-section">
+            <div class="teacherDetails"></div>
+        </div>
+        <div class="right-section">
+                 <h1>Data Select Area</h1>
+                <label for="selectDay">Select day:</label>
+                <select id="selectDay"  name="day" required>
+                    <option value="null">None</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                </select><br><br>
+
+                <label for="selectTime">Select time slot:</label>
+                <select id="selectTime"  name="time" required>
+                    <option value="null">None</option>
+                    <option value="07:40-08:20">07:40-08:20</option>
+                    <option value="08:20-09:00">08:20-09:00</option>
+                    <option value="09:00-09:40">09:00-09:40</option>
+                    <option value="09:40-10:20">09:40-10:20</option>
+                    <option value="10:50-11:30">10:50-11:30</option>
+                    <option value="11:30-12:10">11:30-12:10</option>
+                    <option value="12:10-12:50">12:10-12:50</option>
+                    <option value="12:50-1:30">12:50-1:30</option>
+                </select><br><br>
+
+                <label for="selectGrade">Select Grade:</label>
+                <select id="selectGrade"  name="grade" required>
+                    <option value="null">None</option>
+                    <option value="6">Grade 6 </option>
+                    <option value="7">Grade 7</option>
+                    <option value="8">Grade 8</option>
+                    <option value="9">Grade 9</option>
+                    <option value="10">Grade 10</option>
+                    <option value="11">grade 11</option>
+                </select><br><br>
+
+                <label for="selectClassRoom">Select Class:</label>
+                <select id="selectClassRoom"  name="classRoom" required>
+                    <option value="null">None</option>
+                    <option value="A">Class A</option>
+                    <option value="B">Class B</option>
+                    <option value="C">Class C</option>
+                    <option value="D">Class D</option>
+                    <option value="E">Class E</option>
+                </select><br><br>
+
+            <button type="button" class="button" id="saveButton" onclick="saveTableData()">Save</button>
+    </div>
+    </div>
+</div>
+<br>
+<button type="button" class="button" id="backButton" onclick="goBack()">Back</button>
+<br>
+<hr>
+<div class="footer">
+    <footer>
+        <p>&copy;2023 Student Management System</p>
+    </footer>
+</div>
+</body>
+</html>

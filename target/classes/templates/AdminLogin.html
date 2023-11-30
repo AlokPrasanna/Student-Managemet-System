@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login Page</title>
+    <link href="/CSS/AdminLogin.css" type="text/css" rel="stylesheet">
+</head>
+<script src="/JS/jquery-3.7.1.min.js"></script>
+<script src="/JS/AdminLogin.js"></script>
+<body>
+<div>
+  <header id="header">
+    <h2>Student Management System</h2>
+    <nav>
+      <ul>
+        <li><a href="http://localhost:8080/studentms/adminLogin">Home</a></li>
+        <li><a href="http://localhost:8080/studentms/admin/register">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<hr>
+<br><br>
+<div id="content" class="content">
+  <div class="left-section">
+    <img src="/Image/admin.png" alt="Image Description" class="roundImage">
+  </div>
+  <div class="right-section">
+    <h1> Welcome Student Management System</h1><br>
+  <form>
+    <label for="adminId">Admin ID:</label>
+    <input type="text" id="adminId" name="adminId" placeholder="E.g., A12345" required>
+    <br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br><br>
+    <button type="reset" class="button" id="resetButton">Reset</button>
+    <button type="button" class="button" id="loginButton" onclick="adminLogin()">Login</button>
+  </form>
+  <br>
+  <div id="linkRegisterPage">
+    <a href="http://localhost:8080/studentms/admin/register">Do not have an account?</a>
+  </div>
+  </div>
+</div>
+<br>
+<hr>
+<div class="footer">
+  <footer>
+    <p>&copy;2023 Student Management System</p>
+  </footer>
+</div>
+</body>
+</html>

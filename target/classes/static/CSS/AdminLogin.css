@@ -1,0 +1,140 @@
+body{
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: dimgray;
+}
+header {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+#header h2{
+    font-size: 22px;
+    color: white;
+}
+#header nav{
+    margin-left: auto;
+}
+#header ul {
+    list-style: none;
+    display: flex;
+    margin-right: 0;
+}
+#header li {
+    margin-left: 20px;
+}
+#header a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+#header a:hover {
+    text-decoration: underline;
+}
+hr{
+    background-color: black;
+    height: 2px;
+}
+
+li {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #777;
+}
+
+label {
+    display: block;
+    color: black;
+    font-weight: normal;
+    font-size: 25px;
+    margin-right:250px;
+}
+input[type="text"],
+input[type="password"],
+select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#adminId{
+    margin-left: 100px;
+    width: 85px;
+}
+#password{
+    margin-left: 100px;
+    width: 250px;
+}
+#linkRegisterPage{
+    margin-right: 50px;
+    font-size: 18px;
+    color: black;
+    padding-bottom: 25px;
+
+}
+.right-section{
+    background-color: white;
+    border-radius: 5px;
+    height: auto;
+
+}
+.right-section h1{
+    text-align: center;
+    font-size: 32px;
+    color: #007BFF;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align-all: center;
+}
+#resetButton{
+    background-color: #2ecc71;
+    color: white;
+    margin-right: 30px;
+}
+#loginButton{
+    background-color: #2ecc71;
+    color: white;
+    margin-right: 40px;
+}
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.left-section {
+    flex: 1;
+}
+.roundImage{
+    border-radius: 60px;
+}
+
+.right-section {
+    flex: 1;
+    text-align: center;
+}
+.footer{
+    background-color:black;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: white ;
+}

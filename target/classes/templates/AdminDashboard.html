@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+  <link href="/CSS/AdminDashboard.css" type="text/css" rel="stylesheet">
+  <style>
+    /* Styles for the modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding-top: 60px;
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%;
+    }
+    .modal-content label{
+      font-size: 20px;
+      color: black;
+      margin-left: 100px;
+    }
+    #adminId{
+      margin-left: 100px;
+      width: 75px;
+    }
+    #password{
+      margin-left: 100px;
+      width: 250px;
+    }
+    #accessButton{
+      margin-left: 150px;
+      background-color: #2ecc71;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+<script src="/JS/jquery-3.7.1.min.js"></script>
+<script src="/JS/AdminDashboard.js"></script>
+<script>
+  function  openLoginModal(){
+    $('#loginModal').show();
+  }
+
+  function closeLoginModal() {
+    $('#loginModal').hide();
+  }
+
+  function validateAdminLogin() {
+    let adminId = "A0001";
+    let password = "u123";
+    let getAdminId = localStorage.getItem('adminId');
+    //let enteredAdminId = $('#adminId').val();
+    let enteredPassword = $('#password').val();
+
+    if (getAdminId === adminId && enteredPassword === password) {
+      closeLoginModal();
+      localStorage.setItem('adminID', adminId);
+      alert('Login successful! You can now access Admin Management.');
+      window.location.href = "http://localhost:8080/studentms/admin/manage";
+    } else {
+      alert('Invalid admin or password. Please try again.');
+    }
+  }
+</script>
+<body>
+<div>
+  <header id="header">
+    <h2>Student Management System</h2>
+    <nav>
+      <ul>
+        <li><a href="http://localhost:8080/studentms/adminDashboard">Home</a></li>
+        <li><a href="http://localhost:8080/studentms/admin/viewAdminProfile">View profile</a></li>
+        <li><a href="http://localhost:8080/studentms/admin/updateDetails">Update Profile</a></li>
+        <li><a onclick="openLoginModal()">Admin Management</a></li>
+        <li><a onclick="logOut()">Log out</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<hr>
+<br>
+<div class="dashboard">
+    <div class="sidebar">
+      <h1>Admin Dashboard</h1>
+      <ul>
+        <li onclick="getTimetableDataPage()">Set Timetable Data</li>
+        <li onclick="giveStudentAccessPage()">Give Student Access</li>
+        <li onclick="giveTeacherAccessPage()">Give Teacher Access</li>
+        <li onclick="deleteStudentPage()">Delete Student</li>
+        <li onclick="deleteTeacherPage()">Delete Teacher</li>
+        <li onclick="getStudentDetailsPage()">Get Student Details</li>
+        <li onclick="getTeacherDetailsPage()">Get Teacher Details</li>
+        <li onclick="getAllStudentsPage()">Get All Students</li>
+        <li onclick="getAllTeacherPage()">Get All Teachers</li>
+      </ul>
+    </div>
+<div class="content">
+    <div class="announcement1">
+      <h2>Create Announcement</h2>
+
+      <label for="announcementText">Announcement Text:</label>
+      <textarea id="announcementText" rows="10" cols="40"></textarea>
+
+      <p>Announcement Audience:</p>
+
+      <label>
+        <input type="radio"  name="announcementAudience" value="StudentOnly" checked> Only Students
+      </label>
+
+      <label>
+        <input type="radio" name="announcementAudience" value="TeacherOnly"> Only Teachers
+      </label>
+
+      <label>
+        <input type="radio" name="announcementAudience" value="Both"> Both Students and Teachers
+      </label>
+
+      <button onclick="createAnnouncement()">Create Announcement</button>
+
+      <div id="displayAnnouncement" class="announcement-content"></div>
+    </div><br>
+    <div class="announcement2">
+      <h2>Delete Announcement</h2>
+      <button onclick="deleteAnnouncementPage()">Delete</button>
+    </div><br>
+  <div class="announcement3">
+    <h2>Edit Announcement</h2>
+    <button onclick="editAnnouncementPage()">Edit</button>
+  </div>
+</div>
+</div>
+<br>
+<hr>
+<div class="footer">
+  <footer>
+    <p>&copy;2023 Student Management System</p>
+  </footer>
+</div>
+<!--- Login Model for access the admin management --->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeLoginModal()">&times;</span>
+    <label for="adminId">Admin ID:</label>
+    <input type="text" id="adminId" disabled>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password">
+    <br><br>
+    <button onclick="validateAdminLogin()" id="accessButton" class="button">Login</button>
+  </div>
+</div>
+</body>
+</html>

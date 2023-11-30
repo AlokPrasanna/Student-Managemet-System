@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Announcements</title>
+  <link href="/CSS/TeacherAnnouncements.css" type="text/css" rel="stylesheet">
+</head>
+<script src="/JS/jquery-3.7.1.min.js"></script>
+<script src="/JS/TeacherAnnouncements.js"></script>
+<body>
+<div>
+  <header id="header">
+    <h2>Student Management System</h2>
+    <nav>
+      <ul>
+        <li><a href="http://localhost:8080/studentms/teacherDashboard">Home</a></li>
+        <li><a href="http://localhost:8080/studentms/viewTeacherProfile">View Profile</a></li>
+        <li><a href="http://localhost:8080/studentms/updateTeacherProfile">Update Profile</a></li>
+        <li><a onclick="logOut()">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<hr>
+<br><br>
+<div id="content" >
+  <div id="announcementsList">
+  </div>
+</div>
+<button class="button" type="button" onclick="goBack()" id="backButton">Back</button>
+<br>
+<hr>
+<div class="footer">
+  <footer>
+    <p>&copy;2023 Student Management System</p>
+  </footer>
+</div>
+</body>
+</html>

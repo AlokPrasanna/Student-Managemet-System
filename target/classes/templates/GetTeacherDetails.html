@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Teacher Details</title>
+    <link href="/CSS/GetTeacherDetails.css" type="text/css" rel="stylesheet">
+</head>
+<script src="/JS/jquery-3.7.1.min.js"></script>
+<script src="/JS/GetTeacherDetails.js"></script>
+<body>
+<div>
+    <header id="header">
+        <h2>Student Management System</h2>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:8080/studentms/adminDashboard">Home</a></li>
+                <li><a href="http://localhost:8080/studentms/admin/viewAdminProfile">View profile</a></li>
+                <li><a href="http://localhost:8080/studentms/admin/updateDetails">Update Profile</a></li>
+                <li><a onclick="logOut()">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<hr>
+<br>
+<div id="Content">
+    <h1 style="text-align: center;font-size: 25px;color: #2ecc71;">Get Teacher Details</h1>
+    <label for="teacherId">Enter Teacher ID: </label>
+    <input type="text" id="teacherId" name="teacherId" placeholder="E.g T12345" required><br><br>
+    <button type="button" id="getDetails" onclick="getTeacherDetails()" class="button">Get Details</button><br><br>
+    <div id="teacherDetails">
+        <!--- here print all student details --->
+    </div>
+</div>
+<br>
+<button type="button" class="button" id="backButton" onclick="goBack()">Back</button>
+<br>
+<hr>
+<div class="footer">
+    <footer>
+        <p>&copy;2023 Student Management System</p>
+    </footer>
+</div>
+
+</body>
+</html>

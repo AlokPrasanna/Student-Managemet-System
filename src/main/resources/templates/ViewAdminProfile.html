@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Profile</title>
+  <link href="/CSS/ViewAdminProfile.css" type="text/css" rel="stylesheet">
+</head>
+<script src="/JS/jquery-3.7.1.min.js"></script>
+<script src="/JS/ViewAdminProfile.js"></script>
+<body>
+<div>
+  <header id="header">
+    <h2>Student Management System</h2>
+    <nav>
+      <ul>
+        <li><a href="http://localhost:8080/studentms/adminDashboard">Home</a></li>
+        <li><a href="http://localhost:8080/studentms/admin/viewAdminProfile">View profile</a></li>
+        <li><a href="http://localhost:8080/studentms/admin/updateDetails">Update Profile</a></li>
+        <li><a onclick="logOut()">Log out</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<hr>
+<br>
+<div id="content" >
+  <h1 id="topic">Profile</h1>
+  <br>
+  <p>Name: <span id="name"></span></p>
+  <p>NIC Number: <span id="nic"></span></p>
+  <p>Email Address: <span id="email"></span></p>
+  <p>Home Address: <span id="hAddress"></span></p>
+  <p>Contact Number: <span id="contactNumber"></span></p>
+  <p>Date of Birth: <span id="birthday"></span></p>
+  <p>Gender: <span id="gender"></span></p>
+  <br>
+</div>
+<br>
+<button type="button" class="button" id="backButton" onclick="goBack()">Back</button>
+<br>
+<hr>
+<div class="footer">
+  <footer>
+    <p>&copy;2023 Student Management System</p>
+  </footer>
+</div>
+</body>
+</html>

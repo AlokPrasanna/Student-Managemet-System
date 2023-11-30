@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Timetable</title>
+    <link href="/CSS/StudentTimetable.css" type="text/css" rel="stylesheet">
+</head>
+<script src="/JS/jquery-3.7.1.min.js"></script>
+<script src="/JS/StudentTimetable.js"></script>
+<body>
+<div>
+    <header id="header">
+        <h2>Student Management System</h2>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:8080/studentms/StudentDashboard">Home</a></li>
+                <li><a href="http://localhost:8080/studentms/viewStudentProfile">View Profile</a></li>
+                <li><a href="http://localhost:8080/studentms/updateStudentProfile">Update Profile</a></li>
+                <li><a onclick="logOut()">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<hr>
+<br><br>
+<div class="content">
+    <h1 style="font-size: 22px;text-align: center; padding: 10px; color: #3498db">Student's Timetable</h1><br>
+    <div class="table">
+        <table>
+            <tr class="row0">
+                <th scope="col">Time</th>
+                <th scope="col">Monday</th>
+                <th scope="col">Tuesday</th>
+                <th scope="col">Wednesday</th>
+                <th scope="col">Thursday</th>
+                <th scope="col">Friday</th>
+            </tr>
+            <tr class="row1">
+                <th scope="col">07:40-08:20</th>
+                <th scope="col" id="c11"></th>
+                <th scope="col" id="c12"></th>
+                <th scope="col" id="c13"></th>
+                <th scope="col" id="c14"></th>
+                <th scope="col" id="c15"></th>
+            </tr>
+            <tr class="row2">
+                <th scope="col" >08:20-09:00</th>
+                <th scope="col" id="c21"></th>
+                <th scope="col" id="c22"></th>
+                <th scope="col" id="c23"></th>
+                <th scope="col" id="c24"></th>
+                <th scope="col" id="c25"></th>
+            </tr>
+            <tr class="row3">
+                <th scope="col" >09:00-09:40</th>
+                <th scope="col" id="c31"></th>
+                <th scope="col" id="c32"></th>
+                <th scope="col" id="c33"></th>
+                <th scope="col" id="c34"></th>
+                <th scope="col" id="c35"></th>
+            </tr>
+            <tr class="row4">
+                <th scope="col" >09:40-10:20</th>
+                <th scope="col" id="c41"></th>
+                <th scope="col" id="c42"></th>
+                <th scope="col" id="c43"></th>
+                <th scope="col" id="c44"></th>
+                <th scope="col" id="c45"></th>
+            </tr>
+            <tr class="rowInterval">
+                <th scope="col" id="cIn1" >10:20-10:50</th>
+                <th scope="col" id="cIn2" ></th>
+                <th scope="col"  id="cIn3"></th>
+                <th scope="col" id="cIn4" >Interval</th>
+                <th scope="col" id="cIn5" ></th>
+                <th scope="col" id="cIn6" ></th>
+            </tr>
+            <tr class="row5">
+                <th scope="col" >10:50-11:30</th>
+                <th scope="col" id="c51"></th>
+                <th scope="col" id="c52"></th>
+                <th scope="col" id="c53"></th>
+                <th scope="col" id="c54"></th>
+                <th scope="col" id="c55"></th>
+            </tr>
+            <tr class="row6">
+                <th scope="col" >11:30-12:10</th>
+                <th scope="col" id="c61"></th>
+                <th scope="col" id="c62"></th>
+                <th scope="col" id="c63"></th>
+                <th scope="col" id="c64"></th>
+                <th scope="col" id="c65"></th>
+            </tr>
+            <tr class="row7">
+                <th scope="col" >12:10-12:50</th>
+                <th scope="col" id="c71"></th>
+                <th scope="col" id="c72"></th>
+                <th scope="col" id="c73"></th>
+                <th scope="col" id="c74"></th>
+                <th scope="col" id="c75"></th>
+            </tr>
+            <tr class="row8">
+                <th scope="col" >12:50-01:30</th>
+                <th scope="col" id="c81"></th>
+                <th scope="col" id="c82"></th>
+                <th scope="col" id="c83"></th>
+                <th scope="col" id="c84"></th>
+                <th scope="col" id="c85"></th>
+            </tr>
+        </table>
+    </div>
+    <div class="msg">
+
+    </div>
+</div>
+<button class="button" type="button" onclick="goBack()" id="backButton">Back</button>
+<br>
+<hr>
+<div class="footer">
+    <footer>
+        <p>&copy;2023 Student Management System</p>
+    </footer>
+</div>
+</body>
+</html>

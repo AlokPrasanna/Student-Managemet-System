@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set Teacher Access</title>
+    <link href="/CSS/SetTeacherAccess.css" type="text/css" rel="stylesheet">
+</head>
+<script src="/JS/jquery-3.7.1.min.js"></script>
+<script src="/JS/SetTeacherAccess.js"></script>
+<body>
+<div>
+    <header id="header">
+        <h2>Student Management System</h2>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:8080/studentms/adminDashboard">Home</a></li>
+                <li><a href="http://localhost:8080/studentms/admin/viewAdminProfile">View profile</a></li>
+                <li><a href="http://localhost:8080/studentms/admin/updateDetails">Update Profile</a></li>
+                <li><a onclick="logOut()">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<hr>
+<br>
+    <div class="content">
+        <div id="leftContent">
+            <h1>Set Teacher Access Table</h1>
+            <table id="table">
+                <tr>
+                    <th scope="col">Teacher ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Contact Number</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">DOB</th>
+                    <th scope="col">Gender</th>
+                </tr>
+                <tbody id="teacherTable">
+
+                </tbody>
+            </table>
+        </div>
+        <div id="rightContent">
+            <label for="teacherId">Teacher ID: </label>
+            <input type="text" id="teacherId" name="teacherID" placeholder="E.g T12345" disabled><br><br>
+            <label for="name">teacher Name: </label>
+            <input type="text" id="name" name="name" disabled><br><br>
+            <label for="email">Email Address: </label>
+            <input type="text" id="email" name="email" placeholder="example@gmail.com" disabled><br><br>
+            <label for="tel">Contact Number: </label>
+            <input type="text" id="tel" name="tel" placeholder="071*******" disabled><br><br>
+            <label for="subject">Subject: </label>
+            <input type="text" id="subject" name="subject" disabled><br><br>
+            <label for="birthday">DOB: </label>
+            <input type="text" id="birthday" name="birthday"  disabled><br><br>
+            <label for="gender">Gender: </label>
+            <input type="text" id="gender" name="gender" disabled><br><br>
+
+            <button type="button" id="giveAccess" class="button" onclick="giveAccess()">Give Access</button>
+        </div>
+    </div>
+<br>
+<button type="button" class="button" id="backButton" onclick="goBack()">Back</button>
+<br>
+<hr>
+<div class="footer">
+    <footer>
+        <p>&copy;2023 Student Management System</p>
+    </footer>
+</div>
+</body>
+</html>

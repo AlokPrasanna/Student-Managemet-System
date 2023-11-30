@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message History Page</title>
+    <link href="/CSS/TeacherMessageHistory.css" type="text/css" rel="stylesheet">
+</head>
+<script src="/JS/jquery-3.7.1.min.js"></script>
+<script src="/JS/TeacherMessageHistory.js"></script>
+<body>
+<div>
+<header id="header">
+    <h2>Student Management System</h2>
+    <nav>
+        <ul>
+            <li><a href="http://localhost:8080/studentms/teacherDashboard">Home</a></li>
+            <li><a href="http://localhost:8080/studentms/viewTeacherProfile">View Profile</a></li>
+            <li><a href="http://localhost:8080/studentms/updateTeacherProfile">Update Profile</a></li>
+            <li><a onclick="logOut()">Log Out</a></li>
+        </ul>
+    </nav>
+</header>
+</div>
+<hr>
+
+<div class="content">
+    <h1>Message History</h1>
+    <div class="body">
+        <div class="history">
+
+        </div>
+        <div class="delete">
+            <button type="button" class="button" id="delete" name="delete" onclick="deleteMessage()">Delete</button>
+        </div>
+    </div>
+
+</div>
+
+<button class="button" type="button" onclick="goBack()" id="backButton">Back</button>
+<br>
+<hr>
+<div class="footer">
+    <footer>
+        <p>&copy;2023 Student Management System</p>
+    </footer>
+</div>
+</body>
+</html>
